@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Fotopull
+_Comment=Fotopull application
+Categories=GNOME;Utility;
+Exec=fotopull
+Icon=fotopull
+Terminal=false
+Type=Application

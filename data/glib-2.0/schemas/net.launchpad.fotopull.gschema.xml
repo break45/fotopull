@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="fotopull">
+  <schema id="net.launchpad.fotopull" path="/net/launchpad/fotopull/">
+    <key name="path" type="s">
+      <default>''</default>
+      <summary>camera mount path</summary>
+      <description>camera mount path</description>
+    </key>
+    <key name="pattern" type="s">
+      <default>''</default>
+      <summary>name pattern for created folders</summary>
+      <description>could be for example YYYY_MM_DD</description>
+    </key>
+  </schema>
+</schemalist>
