@@ -31,13 +31,19 @@ class FotopullWindow(Window):
         self.transferButton = self.builder.get_object("transferButton")
         self.settingsButton = self.builder.get_object("settingsButton")
         self.mainToolbar = self.builder.get_object("mainToolbar")
+        self.outputTextView = self.builder.get_object("outputTextView")
+
+
+        # https://developer.gnome.org/gtk2/2.24/TextWidget.html
+        # the buffer for text
+        self.textBuffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (self.outputTextView))  
 
         context = self.mainToolbar.get_style_context()
         context.add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
 
     # tällä nimeämistavalla ei tarvii erikseen lisätä signaaleihin... on_<elementti>_<action>
     def on_transferButton_clicked(self, widget):
-        print "da click"
+        gtk_text_buffer_set_text (self.textBuffer, "Hello, this is some text", -1)
         
 
     def on_settingsButton_clicked(self, widget):
